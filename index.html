@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculator</title>
+    <!-- <script src="./main.js"></script> -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <label for="" id="answer" class="answer">0</label>
+        <div class="inputs">
+        <input type="text" name="" class="value1" id="value1">
+        <input type="text" name="" class="value2">
+    </div>
+        <div class="buttons">
+            <button  onclick="plus()">+</button>
+             <button onclick="minus()">-</button> 
+             <button onclick="multi()">*</button> 
+             <button onclick="div()">/</button>
+             <button onclick="reset()">Reset</button>
+        </div>
+    </div>
+    <script>
+        
+        let value1 = document.getElementsByClassName("value1")[0];
+        let value2 = document.getElementsByClassName("value2")[0];
+        let answer = document.getElementsByClassName("answer")[0];
+        function plus(){
+            let newv1 = parseInt(value1.value);
+            let newv2 = parseInt(value2.value);
+            ans = newv1 + newv2;
+            answer.innerHTML = ans;
+        }
+        function minus(){
+            let newv1 = parseInt(value1.value);
+            let newv2 = parseInt(value2.value);
+            ans = newv1 - newv2;
+            answer.innerHTML = ans;
+        }
+        function multi(){
+            let newv1 = parseInt(value1.value);
+            let newv2 = parseInt(value2.value);
+            ans = newv1 * newv2;
+            answer.innerHTML = ans;
+        }
+        function div(){
+            let newv1 = parseInt(value1.value);
+            let newv2 = parseInt(value2.value);
+            ans = newv1 / newv2;
+            answer.innerHTML = ans;
+        }
+        function reset(){
+            answer.innerHTML = 0;
+        }
+    </script>
+</body>
+
+</html>
